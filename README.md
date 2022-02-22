@@ -7,6 +7,11 @@
 - [Node.js](https://nodejs.org) >= [16.14.0](https://nodejs.org/en/download/)
 - [npm](https://www.npmjs.com/) >= [8.3.1](https://www.npmjs.com/package/npm)
 
+## Funcionalidades extras 🪄
+
+- Todos os produtos selecionados estão sendo armazenados em localStorage, possibilitando consultas mesmo após a página ser fechada.
+- Botão limpar todos os produtos selecionados.
+
 ## Como usar? 💡
 
 ### Clone o repositório

@@ -20,8 +20,14 @@ function SelectedProducts({ selectedProducts, setSelectedProducts }) {
         );
     }
 
+    function clearAll() {
+        setSelectedProducts([]);
+        localStorage.removeItem('selectedProducts');
+    }
+
     return (
         <div id="selected-products-container">
+            <button onClick={clearAll} className="button small">Limpar</button>
             <table className="table">
                 <thead>
                     <tr>

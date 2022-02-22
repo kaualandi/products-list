@@ -13,6 +13,8 @@ function Products({ selectedProducts, setSelectedProducts }) {
             .then(response => {
                 if (localStorage.getItem('selectedProducts')) {
                     setSelectedProducts(JSON.parse(localStorage.getItem('selectedProducts')));
+                } else {
+                    setSelectedProducts([]);
                 }
                 setProducts(response.data);
                 setLoading(false);
@@ -26,13 +28,19 @@ function Products({ selectedProducts, setSelectedProducts }) {
     }, []);
     
     function handleSelectItem(product) {
-        const value = selectedProducts.find(item => item.id === product.id);
-        if (value) {
-            const newSelectedProducts = selectedProducts.filter(item => item.id !== product.id);
-            setSelectedProducts(newSelectedProducts);
-            localStorage.setItem('selectedProducts', JSON.stringify(newSelectedProducts));
+        if (selectedProducts) {
+            const value = selectedProducts.find(item => item.id === product.id);
+            if (value) {
+                const newSelectedProducts = selectedProducts.filter(item => item.id !== product.id);
+                setSelectedProducts(newSelectedProducts);
+                localStorage.setItem('selectedProducts', JSON.stringify(newSelectedProducts));
+            } else {
+                const newSelectedProducts = [...selectedProducts, product];
+                setSelectedProducts(newSelectedProducts);
+                localStorage.setItem('selectedProducts', JSON.stringify(newSelectedProducts));
+            }
         } else {
-            const newSelectedProducts = [...selectedProducts, product];
+            const newSelectedProducts = [product];
             setSelectedProducts(newSelectedProducts);
             localStorage.setItem('selectedProducts', JSON.stringify(newSelectedProducts));
         }
@@ -56,7 +64,7 @@ function Products({ selectedProducts, setSelectedProducts }) {
                     <li className="product-item" key={product.id}>
                         <label>
                             <div className="product-checkbox">
-                                <input type="checkbox" checked={
+                                <input type="checkbox" checked={selectedProducts &&
                                     selectedProducts.filter(item => item.id === product.id).length > 0
                                 } onChange={() => handleSelectItem(product)} />
                                 <div className='checkmark'></div>
