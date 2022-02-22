@@ -27,22 +27,16 @@ npm install
 
 ### Execute o servidor
 
-Para rodar o projeto em modo de desenvolvimento, execute:
+Para rodar o projeto em modo de desenvolvimento e o servidor, execute:
 
 ```bash
-npm start
+npm start & npm run server
 ```
 
 Estará disponível localmente em [http://localhost:3000](http://localhost:3000).
 
-É preciso também iniciar o servidor node, ele é responsável pela requisição da api, já que o React é empedido pelo CORS na mesma tentativa. Em outra instância do terminal, execute:
-
-```bash
-cd backend
-node server.js
-```
-
-Que será servido em [http://localhost:5000](http://localhost:5000).
+O servidor node, é responsável pela requisição da api, já que o React é empedido pelo CORS na mesma tentativa. /
+Ele será servido em [http://localhost:5000](http://localhost:5000).
 
 ## Produção 🚀
 
