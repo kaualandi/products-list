@@ -2,10 +2,6 @@
 
 > Lista de produtos do teste [teste-estagio-front-end](https://github.com/Fnandoz/api-desafio/blob/master/README.md) feito com [Create React App](https://github.com/facebook/create-react-app).
 
-## Live demo ✨
-
-[Heroku App](https://heroku.com)
-
 ## Requisitos 📦
 
 - [Node.js](https://nodejs.org) >= [16.14.0](https://nodejs.org/en/download/)
@@ -59,9 +55,10 @@ Ele agrupa corretamente o React no modo de produção e otimiza a compilação p
 
 ```text
 ├── 📁backend // Server Node.js
-│   ├── 📄server.js
 │   ├── 📄package-lock.json
-│   └── 📄package.json
+│   ├── 📄package.json
+│   ├── 📄Procfile
+│   └── 📄server.js
 ├── 📁public
 │   ├── 📄favicon.ico
 │   ├── 📄font.js // FontAwesome
