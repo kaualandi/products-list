@@ -1,0 +1,6 @@
+#selected-products-container {
+    margin-top: 1rem;
+}
+#selected-products-container .resume .col-6+.col-6 {
+    text-align: right;
+}

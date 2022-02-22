@@ -1,38 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --text: #080808;
+    --background: #fffffe;
+    --background-two: #e9e9e9;
+    --background-hover: #d8d8d8;
+    --border-color: #c9c9c9;
+    --border-radius: 2rem;
+}
+
 .App {
-  text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--background);
+    padding-top: .5rem;
+}
+.App .container {
+    min-height: 93vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table td, table th {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+}
+table td+td, table th+th {
+    text-align: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .App-header * {
+    margin: 0;
+    padding: 0;
+    text-align: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .content .row .col-12 {
+    margin-top: 3rem;
+}
+.App-footer {
+    padding: 1rem;
+    background: var(--background-two);
+}
+.App-footer p {
+    margin: 0;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.italic {
+    font-style: italic;
+}
+.button {
+    display: inline-block;
+    background: var(--background-two);
+    border: 1px solid var(--border-color);
+    border-radius: calc(var(--border-radius) - 1.5rem);
+    color: var(--text);
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.button:hover {
+    background: var(--background-hover);
+    color: var(--text);
+    box-shadow: 0px 0px 10px 2px var(--background-two);
+}
+.button.small {
+    padding: .25rem .5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #fffffe;
+        --background: #181818;
+        --background-two: #2d2d2d;
+        --background-hover: #383838;
+        --border-color: #000000;
+    }
 }
