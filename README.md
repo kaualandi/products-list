@@ -6,6 +6,11 @@
 
 [Heroku App](https://heroku.com)
 
+## Requisitos 📦
+
+- [Node.js](https://nodejs.org) >= [16.14.0](https://nodejs.org/en/download/)
+- [npm](https://www.npmjs.com/) >= [8.3.1](https://www.npmjs.com/package/npm)
+
 ## Como usar? 💡
 
 ### Clone o repositório
@@ -49,3 +54,39 @@ Que será servido em [http://localhost:5000](http://localhost:5000).
 
 Compila o aplicativo para produção na pasta `build`.\
 Ele agrupa corretamente o React no modo de produção e otimiza a compilação para o melhor desempenho.
+
+## Arquitetura 📚
+
+```text
+├── 📁backend // Server Node.js
+│   ├── 📄server.js
+│   ├── 📄package-lock.json
+│   └── 📄package.json
+├── 📁public
+│   ├── 📄favicon.ico
+│   ├── 📄font.js // FontAwesome
+│   ├── 📄index.html
+│   ├── 📄logo192.png
+│   ├── 📄logo512.png
+│   ├── 📄manifest.json
+│   └── 📄robots.txt
+├── 📁src
+│   ├── 📁Components
+│   │   ├── 📁Styles
+│   │   │   ├── 📄Loading.css
+│   │   │   ├── 📄Products.css
+│   │   │   └── 📄SelectedProducts.css
+│   │   ├── 📄Loading.jsx
+│   │   ├── 📄Products.jsx
+│   │   └── 📄SelectedProducts.jsx
+│   ├── 📄App.css
+│   ├── 📄App.jsx
+│   ├── 📄index.css
+│   ├── 📄index.jsx
+│   ├── 📄logo.svg
+│   └── 📄reportWebVitals.js
+├── 📄.gitignore
+├── 📄package-lock.json
+├── 📄package.json
+└── 📄README.md
+```

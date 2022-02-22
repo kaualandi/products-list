@@ -8,7 +8,9 @@
     --border-color: #c9c9c9;
     --border-radius: 2rem;
 }
-
+html, body {
+    background: var(--background-two);
+}
 .App {
     font-family: 'Poppins', sans-serif;
     color: var(--text);
@@ -16,7 +18,7 @@
     padding-top: .5rem;
 }
 .App .container {
-    min-height: 93vh;
+    min-height: 91vh;
 }
 
 table td, table th {
@@ -37,6 +39,7 @@ table td+td, table th+th {
     margin-top: 3rem;
 }
 .App-footer {
+    margin-top: 1rem;
     padding: 1rem;
     background: var(--background-two);
 }
