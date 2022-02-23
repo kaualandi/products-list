@@ -40,7 +40,7 @@ npm start & npm run server
 
 Estará disponível localmente em [http://localhost:3000](http://localhost:3000).
 
-O servidor node, é responsável pela requisição da api, já que o React é empedido pelo CORS na mesma tentativa. /
+O servidor node, é responsável pela requisição da api, já que o React é empedido pelo CORS na mesma tentativa.\
 Ele será servido em [http://localhost:5000](http://localhost:5000).
 
 ## Produção 🚀
