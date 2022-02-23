@@ -32,7 +32,7 @@ npm install
 
 ### Execute o servidor
 
-Para rodar o projeto em modo de desenvolvimento e o servidor, execute:
+Para rodar o projeto em modo de desenvolvimento e o servidor, abra o terminal em bash e execute:
 
 ```bash
 npm start & npm run server
@@ -56,8 +56,7 @@ Ele agrupa corretamente o React no modo de produção e otimiza a compilação p
 ├── 📁backend // Server Node.js
 │   ├── 📄package-lock.json
 │   ├── 📄package.json
-│   ├── 📄Procfile
-│   └── 📄server.js
+│   └── 📄server.js // Arquivo responsável pelo servidor e a requisição da api
 ├── 📁public
 │   ├── 📄favicon.ico
 │   ├── 📄font.js // FontAwesome
@@ -67,15 +66,15 @@ Ele agrupa corretamente o React no modo de produção e otimiza a compilação p
 │   ├── 📄manifest.json
 │   └── 📄robots.txt
 ├── 📁src
-│   ├── 📁Components
-│   │   ├── 📁Styles
+│   ├── 📁Components // Pasta dos componentes da aplicação
+│   │   ├── 📁Styles // Estilos de cada componente da pasta pai
 │   │   │   ├── 📄Loading.css
 │   │   │   ├── 📄Products.css
 │   │   │   └── 📄SelectedProducts.css
-│   │   ├── 📄Loading.jsx
-│   │   ├── 📄Products.jsx
-│   │   └── 📄SelectedProducts.jsx
-│   ├── 📄App.css
+│   │   ├── 📄Loading.jsx // Componente de carregamento
+│   │   ├── 📄Products.jsx // Componente de listagem de produtos
+│   │   └── 📄SelectedProducts.jsx // Componente de listagem de produtos selecionados
+│   ├── 📄App.css // Estilos globais e do componente App
 │   ├── 📄App.jsx
 │   ├── 📄index.css
 │   ├── 📄index.jsx
