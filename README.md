@@ -53,6 +53,7 @@ Ele agrupa corretamente o React no modo de produção e otimiza a compilação p
 
 ```text
 ├── 📁public
+│   ├── 📄_redirects // Redirecionamento do netlify
 │   ├── 📄favicon.ico
 │   ├── 📄font.js // FontAwesome
 │   ├── 📄index.html
