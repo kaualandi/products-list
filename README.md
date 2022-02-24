@@ -35,7 +35,7 @@ npm install
 Para rodar o projeto em modo de desenvolvimento, abra o terminal e execute:
 
 ```bash
-npm start & npm run server
+npm start
 ```
 
 Estará disponível localmente em [http://localhost:3000](http://localhost:3000).
