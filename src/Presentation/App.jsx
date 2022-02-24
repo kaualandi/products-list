@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './Styles/App.css';
 import Products from './Components/Products';
 import SelectedProducts from './Components/SelectedProducts';
 

@@ -10,7 +10,7 @@ const corsOptions = {
     origin: "http://localhost:3000"
 };
 
-const requestLink = "http://api.salessoftwarehouse.com.br/list";
+const requestLink = "https://us-central1-api-desafio.cloudfunctions.net/list";
 
 app.get('/getProducts', cors(corsOptions), async (req, res) => {
     const fetchOptions = {

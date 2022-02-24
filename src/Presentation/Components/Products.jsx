@@ -1,48 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import Loading from './Loading';
-import './Styles/Products.css';
+
+import productsList from '../../Application/productsList';
+import saveSelectedProducts from '../../Application/setSelectedProducts';
+
+import '../Styles/Products.css';
 
 function Products({ selectedProducts, setSelectedProducts }) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [products, setProducts] = useState([]);
     
-    useEffect(() => {
-        axios.get('http://localhost:5000/getProducts')
-            .then(response => {
-                if (localStorage.getItem('selectedProducts')) {
-                    setSelectedProducts(JSON.parse(localStorage.getItem('selectedProducts')));
-                } else {
-                    setSelectedProducts([]);
-                }
-                setProducts(response.data);
-                setLoading(false);
-            })
-            .catch(error => {
-                setError(error.toString());
-                setLoading(false);
-            });
+    
 
+    useEffect(() => {
+        productsList(setProducts, setSelectedProducts, setLoading, setError);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    
+
     function handleSelectItem(product) {
         if (selectedProducts) {
             const value = selectedProducts.find(item => item.id === product.id);
             if (value) {
                 const newSelectedProducts = selectedProducts.filter(item => item.id !== product.id);
-                setSelectedProducts(newSelectedProducts);
-                localStorage.setItem('selectedProducts', JSON.stringify(newSelectedProducts));
+                saveSelectedProducts(setSelectedProducts, newSelectedProducts);
             } else {
                 const newSelectedProducts = [...selectedProducts, product];
-                setSelectedProducts(newSelectedProducts);
-                localStorage.setItem('selectedProducts', JSON.stringify(newSelectedProducts));
+                saveSelectedProducts(setSelectedProducts, newSelectedProducts);
             }
         } else {
             const newSelectedProducts = [product];
-            setSelectedProducts(newSelectedProducts);
-            localStorage.setItem('selectedProducts', JSON.stringify(newSelectedProducts));
+            saveSelectedProducts(setSelectedProducts, newSelectedProducts);
         }
     }
 
@@ -70,8 +58,8 @@ function Products({ selectedProducts, setSelectedProducts }) {
                                 <div className='checkmark'></div>
                             </div>
                             <div className="product-details">
-                                <p className='product-name'>{product.descrição}</p>
-                                <span>{parseFloat(product.valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                                <p className='product-name'>{product.name}</p>
+                                <span>{parseFloat(product.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
                             </div>
                         </label>
                     </li>

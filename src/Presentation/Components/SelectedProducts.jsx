@@ -1,6 +1,8 @@
 import React from "react";
-import './Styles/SelectedProducts.css';
+import '../Styles/SelectedProducts.css';
 import Loading from "./Loading";
+
+import removeSelectedProducts from '../../Application/removeSelectedProducts';
 
 function SelectedProducts({ selectedProducts, setSelectedProducts }) {
 
@@ -21,8 +23,7 @@ function SelectedProducts({ selectedProducts, setSelectedProducts }) {
     }
 
     function clearAll() {
-        setSelectedProducts([]);
-        localStorage.removeItem('selectedProducts');
+        removeSelectedProducts(setSelectedProducts);
     }
 
     return (
@@ -38,8 +39,8 @@ function SelectedProducts({ selectedProducts, setSelectedProducts }) {
                 <tbody>
                     {selectedProducts.map(product => (
                         <tr key={product.id}>
-                            <td>{product.descrição}</td>
-                            <td>{parseFloat(product.valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                            <td>{product.name}</td>
+                            <td>{parseFloat(product.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                         </tr>
                     ))}
                 </tbody>
@@ -53,7 +54,7 @@ function SelectedProducts({ selectedProducts, setSelectedProducts }) {
                     <div className="col-6">
                         <p>Preço total:<br/><span>{
                             selectedProducts.reduce((acc, product) => {
-                                return acc + parseFloat(product.valor);
+                                return acc + parseFloat(product.price);
                             }, 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                         }</span></p>
                     </div>

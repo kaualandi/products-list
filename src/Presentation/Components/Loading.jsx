@@ -1,5 +1,5 @@
 import React from "react";
-import './Styles/Loading.css';
+import '../Styles/Loading.css';
 
 function Loading() {
     return (<div className="progress"></div>);
