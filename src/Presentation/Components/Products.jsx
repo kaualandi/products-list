@@ -11,8 +11,6 @@ function Products({ selectedProducts, setSelectedProducts }) {
     const [error, setError] = useState(false);
     const [products, setProducts] = useState([]);
     
-    
-
     useEffect(() => {
         productsList(setProducts, setSelectedProducts, setLoading, setError);
     // eslint-disable-next-line react-hooks/exhaustive-deps
