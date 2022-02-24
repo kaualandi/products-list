@@ -2,6 +2,10 @@
 
 > Lista de produtos do teste [teste-estagio-front-end](https://github.com/Fnandoz/api-desafio/blob/master/README.md) feito com [Create React App](https://github.com/facebook/create-react-app).
 
+## Live Demo ✨
+
+- [Netlify](https://teste-estagio-front-end.netlify.app/)
+
 ## Requisitos 📦
 
 - [Node.js](https://nodejs.org) >= [16.14.0](https://nodejs.org/en/download/)
