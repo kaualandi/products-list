@@ -1,4 +1,6 @@
-# Bem vindo 👋
+<h1 align="center">Bem Vindo 👋</h1>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/de719c16-2815-4651-974f-2da2a4a48946/deploy-status)](https://app.netlify.com/sites/teste-estagio-front-end/deploys)
 
 > Lista de produtos do teste [teste-estagio-front-end](https://github.com/Fnandoz/api-desafio/blob/master/README.md) feito com [Create React App](https://github.com/facebook/create-react-app).
 
