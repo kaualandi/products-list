@@ -53,10 +53,6 @@ Ele agrupa corretamente o React no modo de produção e otimiza a compilação p
 ## Arquitetura 📚
 
 ```text
-├── 📁backend // Server Node.js
-│   ├── 📄package-lock.json
-│   ├── 📄package.json
-│   └── 📄server.js // Arquivo responsável pelo servidor e a requisição da api
 ├── 📁public
 │   ├── 📄favicon.ico
 │   ├── 📄font.js // FontAwesome
@@ -66,17 +62,25 @@ Ele agrupa corretamente o React no modo de produção e otimiza a compilação p
 │   ├── 📄manifest.json
 │   └── 📄robots.txt
 ├── 📁src
-│   ├── 📁Components // Pasta dos componentes da aplicação
+│   ├── 📁Application // Funções globais
+│   │   ├── 📄getSelectedProducts.jsx // Retorna os produtos selecionados
+│   │   ├── 📄productsList.jsx // Trata a lista de produtos
+│   │   ├── 📄removeSelectedProducts.jsx // Remove todos os produtos selecionados
+│   │   └── 📄setSelectedProducts.jsx // Define os produtos selecionados
+│   ├── 📁Infrastructure // Arquivos de API
+│   │   └── getProducts.jsx // Recupera os produtos da API
+│   ├── 📁Presentation // Componentes/Contêineres
+│   │   ├── 📁Components // Pasta dos componentes da aplicação
+│   │   │   ├── 📄Loading.jsx // Componente de carregamento
+│   │   │   ├── 📄Products.jsx // Componente de listagem de produtos
+│   │   │   └── 📄SelectedProducts.jsx // Componente de listagem de produtos selecionados
 │   │   ├── 📁Styles // Estilos de cada componente da pasta pai
+│   │   │   ├── 📄App.css // Estilos globais e do componente App
 │   │   │   ├── 📄Loading.css
 │   │   │   ├── 📄Products.css
 │   │   │   └── 📄SelectedProducts.css
-│   │   ├── 📄Loading.jsx // Componente de carregamento
-│   │   ├── 📄Products.jsx // Componente de listagem de produtos
-│   │   └── 📄SelectedProducts.jsx // Componente de listagem de produtos selecionados
-│   ├── 📄App.css // Estilos globais e do componente App
-│   ├── 📄App.jsx
-│   ├── 📄index.css
+│   │   └── 📄App.jsx // Componente principal
+│   ├── 📄index.css // Normalizador de fontes
 │   ├── 📄index.jsx
 │   ├── 📄logo.svg
 │   └── 📄reportWebVitals.js
