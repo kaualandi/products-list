@@ -52,6 +52,8 @@ Ele agrupa corretamente o React no modo de produção e otimiza a compilação p
 
 ## Arquitetura 📚
 
+> A tentativa foi de aplicar Clean Architecture.
+
 ```text
 ├── 📁public
 │   ├── 📄favicon.ico
